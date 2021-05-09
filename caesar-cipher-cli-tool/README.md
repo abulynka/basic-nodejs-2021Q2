@@ -16,14 +16,14 @@ npm install
 
 CLI tool accepts 4 options (short alias and full name):
 
-- -s, --shift: a shift
+- -s, --shift: a shift (can be a negative value)
 - -i, --input: an input file
 - -o, --output: an output file
 - -a, --action: an action encode/decode
 
 Run application examples:
 
-- `node main.js -s 1 -a encode` - encodes from stdin and outputs result to stdout with shift 1
-- `node main.js -s 1 -a decode` - decodes from stdin and outputs result to stdout with shift 1
-- `node main.js -s 256 -a encode -i ./plain.txt -o ./encoded.txt` - encodes from plain.txt and outputs result to encoded.txt with shift 256 mod 26
-- `node main.js -s 256 -a encode -i ./encoded.txt -o ./decoded.txt` - decodes from encoded.txt and outputs result to decoded.txt with shift 256 mod 26
+- `node main.mjs -s 1 -a encode` - encodes from stdin and outputs result to stdout with shift 1
+- `node main.mjs -s 1 -a decode` - decodes from stdin and outputs result to stdout with shift 1
+- `node main.mjs -s 256 -a encode -i plain.txt -o encoded.txt` - encodes from plain.txt and outputs result to encoded.txt with shift 256 with mod 26
+- `node main.mjs -s 256 -a encode -i encoded.txt -o decoded.txt` - decodes from encoded.txt and outputs result to decoded.txt with shift 256 with mod 26
